@@ -1,4 +1,5 @@
 <?php
-session_start();
-$j=0;
+    session_start();
+    $i = 0;
+    $j = 0;
 ?>
