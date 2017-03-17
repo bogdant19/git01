@@ -1,0 +1,5 @@
+# Use PHP70CGI as default
+AddHandler fcgid70-script .php
+RewriteEngine on
+RewriteRule    ^$    webroot/		[L]
+RewriteRule    (.*) webroot/$1		[L]

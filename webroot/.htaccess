@@ -1,0 +1,17 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^([^?]*)$ index.php?path=$1 [L,QSA,NC]
+RewriteRule ^$ index.php [L,QSA,NC]
+
+#<ifmodule mod_deflate.c>
+#    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+#</ifmodule>
+
+#Header unset Pragma
+#FileETag None
+#Header unset ETag
+
+#<FilesMatch "\.(ico|jpg|jpeg|png|gif|js|css)$">
+#Header set Cache-Control "max-age=864000, public, must-revalidate"
+#</FilesMatch>
